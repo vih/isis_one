@@ -6,7 +6,6 @@ core        = 7.x
 ; Base - Radix
 base theme  = radix
 
-
 ; Regions
 regions[content] = Content
 
@@ -25,9 +24,51 @@ stylesheets-conditional[IE 8][all][] = assets/stylesheets/ie8.css
 ; Javascript
 scripts[] = assets/javascripts/script.js
 
-; Information added by Drupal.org packaging script on 2014-03-04
-version = "7.x-3.0-alpha3+1-dev"
-core = "7.x"
-project = "radix"
-datestamp = "1393959820"
+; Making it Panels Everywhere aware
 
+api[page_manager][pages_default][version] = 1
+api[page_manager][pages_default][path] = pages
+
+; Below are stuff from ISIS ONE head section
+
+stylesheets[all][] = assets/plugins/bootstrap/css/bootstrap.min.css
+stylesheets[all][] = assets/plugins/font-awesome/css/font-awesome.css
+stylesheets[all][] = assets/plugins/font-linecons/linecons.css
+
+; PLUGINS
+stylesheets[all][] = assets/css/superslides.css
+stylesheets[all][] = assets/css/owl.carousel.css
+stylesheets[all][] = assets/plugins/magnific-popup/magnific-popup.css
+
+; CSS TEMPLATE
+stylesheets[all][] = assets/css/reset.css
+stylesheets[all][] = assets/css/framework.css
+stylesheets[all][] = assets/css/typography.css
+stylesheets[all][] = assets/css/layout.css
+
+stylesheets[all][] = assets/css/blog.css
+
+; Modernizr
+scripts[] = assets/plugins/modernizr.min.js
+
+; Below are stuff from ISIS ONE footer section
+
+; CORE FILES
+;scripts[] = assets/plugins/jquery/jquery-1.10.2.min.js
+;scripts[] = assets/plugins/bootstrap/js/bootstrap.min.js
+;scripts[] = assets/plugins/jquery.isotope.js
+;scripts[] = assets/plugins/masonry.js
+
+; PLUGINS
+;scripts[] = assets/plugins/jquery-fitvids/jquery.fitvids.min.js
+;scripts[] = assets/plugins/jquery-appear/jquery.appear.js
+;scripts[] = assets/plugins/superslides/dist/jquery.superslides.min.js
+;scripts[] = assets/plugins/jquery-owl-carousel/owl.carousel.min.js
+;scripts[] = assets/plugins/carouFredSel/jquery.carouFredSel-6.2.1-packed.js
+;scripts[] = assets/plugins/jquery-countTo/jquery.countTo.js
+;scripts[] = assets/plugins/magnific-popup/jquery.magnific-popup.min.js
+;scripts[] = assets/plugins/jquery.mb.YTPlayer.js ; Youtube video background
+;scripts[] = assets/plugins/holder.js ;  delete on production
+
+; JS SCRIPTS
+;scripts[] = assets/js/scripts.js

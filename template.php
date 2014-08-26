@@ -26,6 +26,28 @@ function isis_one_css_alter(&$css) {
   unset($css[$radix_path . '/assets/stylesheets/radix-print.css']);
 }
 
+function isis_one_preprocess_html(&$variables) {
+    // CORE FILES
+    // drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/jquery/jquery-1.10.2.min.js', array('type' => 'file', 'scope' => 'footer'));
+    // drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/bootstrap/js/bootstrap.min.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/jquery.isotope.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/masonry.js', array('type' => 'file', 'scope' => 'footer'));
+
+    // PLUGINS
+    drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/jquery-fitvids/jquery.fitvids.min.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/jquery-appear/jquery.appear.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/superslides/dist/jquery.superslides.min.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/jquery-owl-carousel/owl.carousel.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/carouFredSel/jquery.carouFredSel-6.2.1-packed.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/jquery-countTo/jquery.countTo.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/magnific-popup/jquery.magnific-popup.min.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/jquery.mb.YTPlayer.js', array('type' => 'file', 'scope' => 'footer')); // Youtube video background
+    // drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/plugins/holder.js', array('type' => 'file', 'scope' => 'footer')); // delete on production
+
+    // JS SCRIPTS
+    drupal_add_js(drupal_get_path('theme', 'isis_one') . '/assets/js/scripts.js', array('type' => 'file', 'scope' => 'footer')); // delete on production
+}
+
 /**
  * Implements template_preprocess_page().
  */
